@@ -140,7 +140,11 @@ function App() {
         <Route
           path='/groupedteammembers'
           element={
-            <GroupedTeamMembers />
+            <GroupedTeamMembers
+              employees={employees}
+              selectedTeam={selectedTeam}
+              setTeam={setTeam}
+            />
           }
         />
         <Route
