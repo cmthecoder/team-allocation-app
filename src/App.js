@@ -4,7 +4,10 @@ import Employees from './Employees';
 import Footer from './Footer';
 import Header from './Header';
 import GroupedTeamMembers from './GroupedTeamMembers';
+import NavBar from './NavBar';
 import { Routes, Route } from 'react-router-dom';
+import NotFound from './NotFound';
+import { Navbar } from 'react-bootstrap';
 
 function App() {
 
@@ -119,6 +122,7 @@ function App() {
 
   return (
     <div>
+      <NavBar />
       <Header
         selectedTeam={selectedTeam}
         teamMemberCount={employees.filter((employee) => employee.teamName === selectedTeam).length}
@@ -137,6 +141,12 @@ function App() {
           path='/groupedteammembers'
           element={
             <GroupedTeamMembers />
+          }
+        />
+        <Route
+          path='*'
+          element={
+            <NotFound />
           }
         />
       </Routes>
