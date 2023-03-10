@@ -9,10 +9,10 @@ const Employees = ({employees, selectedTeam, handleEmployeeCardClick, handleTeam
       <div className='row justify-content-center mt-3 mb-3'>
         <div className='col-6'>
           <select className="form-select form-select-lg" value={selectedTeam} onChange={handleTeamSelectionChange}>
-            <option value="Team A">Team A</option>
-            <option value="Team B">Team B</option>
-            <option value="Team C">Team C</option>
-            <option value="Team D">Team D</option>
+            <option value="TeamA">Team A</option>
+            <option value="TeamB">Team B</option>
+            <option value="TeamC">Team C</option>
+            <option value="TeamD">Team D</option>
           </select>
         </div>
       </div>
